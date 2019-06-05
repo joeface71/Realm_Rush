@@ -17,7 +17,7 @@ public class PathFinder : MonoBehaviour
         var waypoints = FindObjectsOfType<Waypoint>();
         foreach (Waypoint waypoint in waypoints)
         {
-            var gridPos = waypoint.GetGridPos();            
+            var gridPos = waypoint.GetGridPos();             
             if (grid.ContainsKey(gridPos))
             {
                 Debug.LogWarning("Skipping Overlapping Block " + waypoint);
