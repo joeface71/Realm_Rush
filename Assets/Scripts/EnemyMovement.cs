@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float enemyMovementSpeed = 2f;
+    
+
     void Start()
     {
         Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
