@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float enemyMovementSpeed = .5f;
     [SerializeField] ParticleSystem goalParticle;
     
+    
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
     private void SelfDestruct()
     {
         var vfx = Instantiate(goalParticle, transform.position, Quaternion.identity);
-        vfx.Play();
+        vfx.Play();        
 
         Destroy(vfx.gameObject, vfx.main.duration); // need to specify gameObject
         Destroy(gameObject);
